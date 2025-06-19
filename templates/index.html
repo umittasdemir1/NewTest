@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Müşteri Analiz Paneli</title>
+  <meta charset="UTF-8">
+  <title>Excel Analizi</title>
 </head>
 <body>
-  <h2>Excel Dosyanızı Yükleyin</h2>
-  <form action="/analyze" method="post" enctype="multipart/form-data">
-    <label>Excel Dosyası:</label>
+  <h1>Excel Dosyası Yükle</h1>
+  <form action="/analyze" method="POST" enctype="multipart/form-data">
     <input type="file" name="file" required><br><br>
-
     <label>Analiz Türü:</label>
     <select name="analysis">
       <option value="sales">Ürün Satış Analizi</option>
-      <option value="lift">Lift Analizi</option>
+      <option value="lift">Sepet Analizi (Lift)</option>
       <option value="pair">Birlikte Satılan Ürünler</option>
       <option value="time">Zaman Bazlı Satış</option>
-      <option value="customer">Müşteri Tipi</option>
+      <option value="customer">Müşteri Tipi Analizi</option>
     </select><br><br>
-
-    <label>Ürün 1 (sadece Lift için):</label>
-    <input type="text" name="urun1"><br>
-
-    <label>Ürün 2 (sadece Lift için):</label>
+    <label>Ürün 1:</label>
+    <input type="text" name="urun1">
+    <label>Ürün 2:</label>
     <input type="text" name="urun2"><br><br>
-
-    <button type="submit">Analizi Başlat</button>
+    <button type="submit">Yükle ve Analiz Et</button>
   </form>
 </body>
 </html>
